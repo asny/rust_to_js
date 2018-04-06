@@ -1,57 +1,59 @@
 # rust_to_js
-Hello world example of compiling Rust and OpenGL 4.3 to javascript and WebGL 2.0
+Hello world example of Rust, OpenGL and SDL2 which supports compilation to javascript and WebGL 2.0.
 
-# Installation and use
+* Easy compilation for both desktop and web
+* Guarantee that only features supported by WebGL 2.0 is used
+* Possible to preload resources (see https://kripken.github.io/emscripten-site/docs/porting/files/packaging_files.html)
 
-## Rust: Install
-$ curl https://sh.rustup.rs -sSf | sh
-- Logout and in again
-(https://www.rust-lang.org/en-US/install.html)
+# Installation
+### Rust
+```$ curl https://sh.rustup.rs -sSf | sh```
 
-## Rust: Use
-$ cargo new hello_world --bin
-$ cd hello_world
-$ cargo run
-(https://doc.rust-lang.org/cargo/getting-started/first-steps.html)
+Logout and in again
 
-## SDL2: Install
-$ brew install sdl2
+(See also https://www.rust-lang.org/en-US/install.html)
 
-## SDL2: Use
-- Add sdl2 = “0.29.0” to Cargo.toml dependencies
-- Modify src/main.rs to use sdl2 (e.g. https://gist.githubusercontent.com/fazibear/c81677c67457b96d1809f9d7492f9a60/raw/7c9e71d6133012f5ec7d9c72ea6a12b93bb92692/main0.rs)
-$ cargo run
+### SDL2
+```$ brew install sdl2```
 
-## Emscripten: Install
-$ cd ~/
-$ git clone https://github.com/juj/emsdk .emsdk
-$ cd .emsdk/
-$ ./emsdk install latest
-$ ./emsdk activate latest
-$ source ./emsdk_env.sh
+### Emscripten
+```$ cd ~/```
 
-## Emscripten: Compile SDL2
-- Change embuilder.py to use python
-$ embuilder.py build sdl2
-$ export EMMAKEN_CFLAGS="-s USE_SDL=2"
+```$ git clone https://github.com/juj/emsdk .emsdk```
 
-## Emscripten: Use
-- cd to hello_world project folder
-$ rustup target add asmjs-unknown-emscripten
-- Modify src/main.rs to use emscripten (e.g. https://gist.githubusercontent.com/fazibear/9ce5287dcb75117d8691393c7d3f626d/raw/2fac8407fe7d966f3d1d640d8799b2ae1a4f9ec7/main1.rs)
-- Add src/emscripten.rs (e.g. https://gist.githubusercontent.com/fazibear/4624a1c8cb2c7edd723e7a754681de16/raw/405ee9342cbb0dc89eca948af142dd5566c01879/emscripten.rs)
-$ cargo run
-$ cargo build --target asmjs-unknown-emscripten
+```$ cd .emsdk/```
 
-## Emscripten: Rebuild
-$ source ~/.emsdk/emsdk_env.sh
-$ export EMMAKEN_CFLAGS="-s USE_SDL=2"
-$ cargo build --target asmjs-unknown-emscripten
+```$ ./emsdk install latest```
 
-## Web
-Add index.html
-$ python -m SimpleHTTPServer
+```$ ./emsdk activate latest```
+
+```$ source ./emsdk_env.sh```
+
+(See also https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html)
+
+```$ embuilder.py build sdl2``` (It might be necessary to change embuilder.py to use python)
+
+```$ rustup target add asmjs-unknown-emscripten```
+
+### rust_to_js
+```$ git clone https://github.com/asny/rust_to_js.git rust_to_js```
+
+# Compilation
+cd to rust_to_js project folder
+
+### Desktop
+```$ cargo run```
+
+### Web
+```$ ./buildToWeb```
+
+```$ python -m SimpleHTTPServer```
+
 Go to http://localhost:8000/
 
-## Source:
-(https://blog.fazibear.me/definitive-guide-to-rust-sdl-2-and-emscripten-93d707b22bbb)
+### Clean
+```$ ./clean```
+
+# Sources:
+- https://blog.fazibear.me/definitive-guide-to-rust-sdl-2-and-emscripten-93d707b22bbb
+- http://nercury.github.io/rust/opengl/tutorial/2018/02/08/opengl-in-rust-from-scratch-00-setup.html
