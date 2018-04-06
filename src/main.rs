@@ -22,11 +22,11 @@ fn main() {
     {
         let gl_attr = video_ctx.gl_attr();
         gl_attr.set_context_profile(sdl2::video::GLProfile::Core);
-        gl_attr.set_context_version(4, 1);
+        gl_attr.set_context_version(4, 1); // Use OpenGL 4.1 since that is the newest version supported on macOS
     }
 
     let window = video_ctx
-        .window("Dust", 900, 700)
+        .window("Hello world!", 900, 700)
         .opengl()
         .position_centered()
         .resizable()
