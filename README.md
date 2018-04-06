@@ -13,9 +13,6 @@ Logout and in again
 ### SDL2
 ```$ brew install sdl2```
 
-### rust_to_js
-```$ git clone https://github.com/asny/rust_to_js.git rust_to_js```
-
 ### Emscripten
 ```$ cd ~/```
 
@@ -34,6 +31,9 @@ Change embuilder.py to use python (may not be necessary)
 ```$ embuilder.py build sdl2```
 
 ```$ rustup target add asmjs-unknown-emscripten```
+
+### rust_to_js
+```$ git clone https://github.com/asny/rust_to_js.git rust_to_js```
 
 # Compilation
 cd to rust_to_js project folder
