@@ -52,6 +52,6 @@ Go to http://localhost:8000/
 ```$ ./clean```
 
 # Sources:
-https://www.rust-lang.org/en-US/install.html
-https://blog.fazibear.me/definitive-guide-to-rust-sdl-2-and-emscripten-93d707b22bbb
-http://nercury.github.io/rust/opengl/tutorial/2018/02/08/opengl-in-rust-from-scratch-00-setup.html
+- https://www.rust-lang.org/en-US/install.html
+- https://blog.fazibear.me/definitive-guide-to-rust-sdl-2-and-emscripten-93d707b22bbb
+- http://nercury.github.io/rust/opengl/tutorial/2018/02/08/opengl-in-rust-from-scratch-00-setup.html
