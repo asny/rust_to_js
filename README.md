@@ -1,7 +1,7 @@
 # rust_to_js
-Hello world example of Rust, OpenGL and SDL2 which supports compilation to javascript and WebGL 2.0.
+Hello world example of Rust, OpenGL and SDL2 which supports compilation to JavaScript/WebAssembly and WebGL 2.0.
 
-* Easy compilation for both desktop and web
+* Easy compilation for both desktop and web (both WebAssembly and JavaScript)
 * Guarantee that only features supported by WebGL 2.0 is used
 * Possible to preload resources (see https://kripken.github.io/emscripten-site/docs/porting/files/packaging_files.html)
 
@@ -31,9 +31,15 @@ Logout and in again
 
 (See also https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html)
 
+### Emscripten + SDL2
 ```$ embuilder.py build sdl2``` (It might be necessary to change embuilder.py to use python)
 
+### Emscripten + Rust
+```$ embuilder.py build binaryen``` (It might be necessary to change embuilder.py to use python)
+
 ```$ rustup target add asmjs-unknown-emscripten```
+
+```$ rustup target add wasm32-unknown-emscripten```
 
 ### rust_to_js
 ```$ git clone https://github.com/asny/rust_to_js.git rust_to_js```
@@ -45,7 +51,7 @@ cd to rust_to_js project folder
 ```$ cargo run```
 
 ### Web
-```$ ./buildToWeb```
+```$ ./toJS``` or ```$ ./toWasm```
 
 ```$ python -m SimpleHTTPServer```
 
