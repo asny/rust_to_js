@@ -1,7 +1,13 @@
 .DS_Store
+
+# web
 *.html
 *.data
 *.html.map
 *.js
+*.wasm
+*.wasm.map
+*.wast
+
 /target/
 **/*.rs.bk
