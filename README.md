@@ -8,7 +8,10 @@ Hello world example of Rust, OpenGL and SDL2 which supports compilation to javas
 # Installation
 ### Rust
 ```$ curl https://sh.rustup.rs -sSf | sh```
+
 Logout and in again
+
+(See also https://www.rust-lang.org/en-US/install.html)
 
 ### SDL2
 ```$ brew install sdl2```
@@ -26,9 +29,9 @@ Logout and in again
 
 ```$ source ./emsdk_env.sh```
 
-Change embuilder.py to use python (may not be necessary)
+(See also https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html)
 
-```$ embuilder.py build sdl2```
+```$ embuilder.py build sdl2``` (It might be necessary to change embuilder.py to use python)
 
 ```$ rustup target add asmjs-unknown-emscripten```
 
@@ -52,6 +55,5 @@ Go to http://localhost:8000/
 ```$ ./clean```
 
 # Sources:
-- https://www.rust-lang.org/en-US/install.html
 - https://blog.fazibear.me/definitive-guide-to-rust-sdl-2-and-emscripten-93d707b22bbb
 - http://nercury.github.io/rust/opengl/tutorial/2018/02/08/opengl-in-rust-from-scratch-00-setup.html
