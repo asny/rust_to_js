@@ -7,40 +7,40 @@ Hello world example of Rust, OpenGL and SDL2 which supports compilation to javas
 
 # Installation
 ### Rust
-$ curl https://sh.rustup.rs -sSf | sh
+```$ curl https://sh.rustup.rs -sSf | sh```
 - Logout and in again
 (https://www.rust-lang.org/en-US/install.html)
 
 ### SDL2
-$ brew install sdl2
+```$ brew install sdl2```
 
 ### rust_to_js
-$ git clone https://github.com/asny/rust_to_js.git rust_to_js
+```$ git clone https://github.com/asny/rust_to_js.git rust_to_js```
 
 ### Emscripten
-$ cd ~/
-$ git clone https://github.com/juj/emsdk .emsdk
-$ cd .emsdk/
-$ ./emsdk install latest
-$ ./emsdk activate latest
-$ source ./emsdk_env.sh
+```$ cd ~/```
+```$ git clone https://github.com/juj/emsdk .emsdk```
+```$ cd .emsdk/```
+```$ ./emsdk install latest```
+```$ ./emsdk activate latest```
+```$ source ./emsdk_env.sh```
 - Change embuilder.py to use python (may not be necessary)
-$ embuilder.py build sdl2
-$ rustup target add asmjs-unknown-emscripten
+```$ embuilder.py build sdl2```
+```$ rustup target add asmjs-unknown-emscripten```
 
 # Compilation
 - cd to rust_to_js project folder
 
 ### Desktop
-$ cargo run
+```$ cargo run```
 
 ### Web
-$ ./buildToWeb
-$ python -m SimpleHTTPServer
+```$ ./buildToWeb```
+```$ python -m SimpleHTTPServer```
 Go to http://localhost:8000/
 
 ### Clean
-$ ./clean
+```$ ./clean```
 
 # Sources:
 https://blog.fazibear.me/definitive-guide-to-rust-sdl-2-and-emscripten-93d707b22bbb
