@@ -4,4 +4,8 @@ version = "0.1.0"
 authors = ["Asger <asger.nyman@alexandra.dk>"]
 
 [dependencies]
+gl = { path = "lib/gl" }
 sdl2 = "0.29.0"
+
+[features]
+gl_debug = ["gl/debug"]
